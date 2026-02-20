@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atacadão - iFood</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-paginas">
+
+    <header class="faixa-verde">
+        <button class="btn-voltar" onclick="history.back()">← Voltar</button>
+        
+        <a href="index.html" style="display: flex; align-items: center;">
+            <img src="img/logo.png" alt="Logo Atacadão" class="logo">
+        </a>
+        
+        <h1>Atacadão - Icoaraci</h1>
+        
+        <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp" class="icon-whats">
+        </a>
+    </header>
+
+    <main class="container-principal">
+        
+        <div style="text-align: center; padding: 40px 20px 10px 20px;">
+            <img src="img/logo-ifood.png" alt="iFood" width="150" style="margin-bottom: 20px;">
+            <h2 style="color: var(--vermelho-ifood); margin-top: 0;">Faça suas compras pelo iFood!</h2>
+            <p style="color: #555;">Receba em casa com a mesma qualidade e preço da loja.</p>
+            <button class="btn-laranja" onclick="abrirModal('modalIfood')">BAIXAR APP AGORA</button>
+        </div>
+
+        <section class="tutorial" style="width: 90%; max-width: 600px; margin-bottom: 40px;">
+            <h3 style="color: var(--vermelho-ifood); margin-top: 0;">Como comprar pelo iFood</h3>
+            
+            <p><strong>1. Baixe o App:</strong> Clique no botão acima e instale o iFood no seu aparelho.</p>
+            <p><strong>2. Crie sua conta:</strong> Insira seus dados ou faça login com o Google/Apple.</p>
+            <p><strong>3. Busque a Loja:</strong> Na barra de pesquisa, digite "Atacadão Icoaraci".</p>
+            <p><strong>4. Faça seu pedido:</strong> Adicione os produtos ao carrinho e finalize a compra. É rápido e fácil!</p>
+            
+            <button class="btn-laranja" onclick="subirTela()" style="margin-top: 25px;">
+                ↑ Voltar ao topo para baixar
+            </button>
+        </section>
+
+    </main>
+
+    <div id="modalIfood" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalIfood')">&times;</span>
+            <h3 style="color: #333;">Escolha sua plataforma</h3>
+            
+            <div class="botoes-download-modal">
+                <button class="btn-pequeno"><img src="img/android.png" alt="Android"> Android</button>
+                <button class="btn-pequeno"><img src="img/apple.png" alt="Apple"> iOS</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <button id="btn-open-legal" class="btn-legal" onclick="abrirModal('modalLegal')">
+                Informações
+            </button>
+        </div>
+    </footer>
+
+    <div id="modalLegal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalLegal')">&times;</span>
+            <h3 style="color: var(--verde);">Informações do Sistema</h3>
+            <p>Portal desenvolvido para uso interno e facilitação de acesso aos clientes do Atacadão Icoaraci.</p>
+            
+            <p>
+                <strong>Desenvolvedor:</strong> Thiago Santos 
+                (<a href="https://github.com/Hardjackers" target="_blank" style="color: var(--laranja); text-decoration: none; font-weight: bold;">
+                    🧑‍💻 Hardjackers
+                </a>)
+            </p>
+            <p><strong>Setor:</strong> CPD</p>
+            <p><strong>Versão:</strong> 1.0</p>
+            
+            <button class="btn-laranja" onclick="fecharModal('modalLegal')" style="margin-top: 15px;">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

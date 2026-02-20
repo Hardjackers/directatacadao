@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas e Atualizações - Atacadão</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-paginas">
+
+    <header class="faixa-verde">
+        <button class="btn-voltar" onclick="history.back()">← Voltar</button>
+        <a href="index.html" style="display: flex; align-items: center;">
+            <img src="img/logo.png" alt="Logo Atacadão" class="logo">
+        </a>
+        
+        <h1>Atacadão - Icoaraci</h1>
+        
+        <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank">
+            <img src="img/whatsapp.png" alt="Contato WhatsApp" class="icon-whats">
+        </a>
+    </header>
+
+    <main class="container-principal">
+        <div class="cabecalho-ofertas">
+            <h2 style="color: var(--verde); margin-bottom: 5px;">Ofertas da Semana</h2>
+            <p style="color: #666; margin-top: 0;">Confira nossos encartes e promoções atualizadas.</p>
+        </div>
+        
+        <section class="galeria-ofertas">
+            
+            <article class="card-oferta">
+                <img src="img/encarte1.jpg" alt="Oferta 1" class="img-oferta">
+                <div class="info-oferta">
+                    <h4>Festival de Biscoitos</h4>
+                    <p>Aproveite as ofertas exclusivas das marcas parceiras. Validade: até 25/02.</p>
+                </div>
+            </article>
+
+            <article class="card-oferta">
+                <img src="img/encarte2.jpg" alt="Oferta 2" class="img-oferta">
+                <div class="info-oferta">
+                    <h4>Especial Fim de Semana</h4>
+                    <p>Carnes e bebidas com descontos especiais para o seu churrasco.</p>
+                </div>
+            </article>
+
+            <article class="card-oferta">
+                <img src="img/encarte3.jpg" alt="Oferta 3" class="img-oferta">
+                <div class="info-oferta">
+                    <h4>Limpeza em Dobro</h4>
+                    <p>Compre 2 e leve 3 na linha de amaciantes e sabão em pó.</p>
+                </div>
+            </article>
+
+        </section>
+        
+        <button class="btn-laranja" onclick="subirTela()" style="margin-top: 30px;">
+            ↑ Voltar ao topo
+        </button>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <button id="btn-open-legal" class="btn-legal" onclick="abrirModal('modalLegal')">
+                Informações
+            </button>
+        </div>
+    </footer>
+
+    <div id="modalLegal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalLegal')">&times;</span>
+            <h3 style="color: var(--verde);">Informações do Sistema</h3>
+            <p>Portal desenvolvido para uso interno e facilitação de acesso aos clientes do Atacadão Icoaraci.</p>
+            
+            <p>
+                <strong>Desenvolvedor:</strong> Thiago Santos 
+                (<a href="https://github.com/Hardjackers" target="_blank" style="color: var(--laranja); text-decoration: none; font-weight: bold;">
+                    🧑‍💻 Hardjackers
+                </a>)
+            </p>
+            <p><strong>Setor:</strong> CPD</p>
+            <p><strong>Versão:</strong> 1.0</p>
+            
+            <button class="btn-laranja" onclick="fecharModal('modalLegal')" style="margin-top: 15px;">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

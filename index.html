@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atacadão - Icoaraci</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-principal">
+
+    <audio id="vinheta" src="audio/atacadao.mp3"></audio>
+
+    <header class="faixa-verde">
+        <a href="index.html" style="display: flex; align-items: center;">
+            <img src="img/logo.png" alt="Logo Atacadão" class="logo">
+        </a>
+        
+        <h1>Sejam Bem-Vindo, Atacadão Icoaraci</h1>
+        
+        <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank">
+            <img src="img/whatsapp.png" alt="Contato WhatsApp" class="icon-whats">
+        </a>
+    </header>
+
+    <main class="container-principal">
+        
+        <section class="bloco-branco">
+            <div class="banner-clicavel" onclick="location.href='atualizacoes.html'">
+                <img src="img/produtos.avif" alt="Atualizações e Promoções">
+                <div class="banner-overlay">
+                    <strong>Ofertas da Semana!</strong><br>
+                    Clique aqui para ver o encarte completo.
+                </div>
+            </div>
+        </section>
+
+        <section class="bloco-branco">
+            <h3>Confira seus descontos agora no app!</h3>
+            <button class="btn-verde" onclick="location.href='download-app.html'">
+                Baixar App Meu Atacadão
+            </button>
+        </section>
+
+        <section class="bloco-branco">
+            <h3>Compre agora no Conforto de sua casa.</h3>
+            <button class="btn-vermelho" onclick="location.href='ifood.html'">
+                Comprar pelo iFood
+            </button>
+        </section>
+
+        <section class="bloco-branco">
+            <h3>Compre agora mesmo pelo site</h3>
+            <button class="btn-verde" onclick="abrirModal('modalSite')">
+                🛒 Separar Carrinho
+            </button>
+        </section>
+
+    </main>
+
+    <div id="modalSite" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalSite')">&times;</span>
+            <h3>Acessar o Site Oficial</h3>
+            <p>Você será redirecionado para o site nacional do Atacadão.</p>
+            <a href="https://www.atacadao.com.br" target="_blank" style="text-decoration: none;">
+                <button class="btn-laranja">Ir para o site</button>
+            </a>
+        </div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <button id="btn-open-legal" class="btn-legal" onclick="abrirModal('modalLegal')">
+                Informações
+            </button>
+        </div>
+    </footer>
+
+    <div id="modalLegal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalLegal')">&times;</span>
+            <h3 style="color: var(--verde);">Informações do Sistema</h3>
+            <p>Portal desenvolvido para uso interno e facilitação de acesso aos clientes do Atacadão Icoaraci.</p>
+            
+            <p>
+                <strong>Desenvolvedor:</strong> Thiago Santos 
+                (<a href="https://github.com/Hardjackers" target="_blank" style="color: var(--laranja); text-decoration: none; font-weight: bold;">
+                    🧑‍💻 Hardjackers
+                </a>)
+            </p>
+            <p><strong>Setor:</strong> CPD</p>
+            <p><strong>Versão:</strong> 1.0</p>
+            
+            <button class="btn-laranja" onclick="fecharModal('modalLegal')" style="margin-top: 15px;">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Meu Atacadão</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-paginas">
+
+    <header class="faixa-verde">
+        <button class="btn-voltar" onclick="history.back()">← Voltar</button>
+        <a href="index.html" style="display: flex; align-items: center;">
+            <img src="img/logo.png" alt="Logo Atacadão" class="logo">
+        </a>
+        
+        <h1>Atacadão - Icoaraci</h1>
+        
+        <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank">
+            <img src="img/whatsapp.png" alt="Contato WhatsApp" class="icon-whats">
+        </a>
+    </header>
+
+    <section class="layout-app">
+        <img src="img/app.avif" alt="Celular com App">
+        
+        <div class="info-app">
+            <h2>App Meu Atacadão</h2>
+            <p>Ative descontos exclusivos direto no caixa informando seu CPF.</p>
+            <button class="btn-pequeno" style="margin: 0;"><img src="img/android.png"> Android</button>
+            <button class="btn-pequeno" style="margin: 10px 0 0 0;"><img src="img/apple.png"> iPhone</button>
+        </div>
+    </section>
+
+    <section class="tutorial">
+        <h3 style="color: var(--laranja);">Como criar ou recuperar a conta cadastrada</h3>
+        <p><strong>Para Criar:</strong> Baixe o app, clique em "Criar Conta", insira seu CPF, e-mail e crie uma senha. Você receberá um código de validação no e-mail.</p>
+        <p><strong>Para Recuperar:</strong> Na tela de login, clique em "Esqueci minha senha". Digite seu CPF e um link de redefinição será enviado para o seu e-mail ou SMS cadastrado.</p>
+        
+        <br>
+        <button class="btn-verde" onclick="subirTela()">Voltar ao topo para baixar</button>
+    </section>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <button id="btn-open-legal" class="btn-legal" onclick="abrirModal('modalLegal')">
+                Informações
+            </button>
+        </div>
+    </footer>
+
+    <div id="modalLegal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalLegal')">&times;</span>
+            <h3 style="color: var(--verde);">Informações do Sistema</h3>
+            <p>Portal desenvolvido para uso interno e facilitação de acesso aos clientes do Atacadão Icoaraci.</p>
+            
+            <p>
+                <strong>Desenvolvedor:</strong> Thiago Santos 
+                (<a href="https://github.com/Hardjackers" target="_blank" style="color: var(--laranja); text-decoration: none; font-weight: bold;">
+                    🧑‍💻 Hardjackers
+                </a>)
+            </p>
+            <p><strong>Setor:</strong> CPD</p>
+            <p><strong>Versão:</strong> 1.0</p>
+            
+            <button class="btn-laranja" onclick="fecharModal('modalLegal')" style="margin-top: 15px;">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
