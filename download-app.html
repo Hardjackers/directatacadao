@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Meu Atacadão</title>
+    <title>Atacadão - Icoaraci</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="icon" href="img/logo.png" type="image/png">
 </head>
 <body class="body-paginas">
 
     <header class="faixa-verde">
-        <button class="btn-voltar" onclick="history.back()">← Voltar</button>
+        <button class="btn-voltar" onclick="history.back()">←</button>
+        
         <a href="index.html" style="display: flex; align-items: center;">
             <img src="img/logo.png" alt="Logo Atacadão" class="logo">
         </a>
         
         <h1>Atacadão - Icoaraci</h1>
         
-        <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank">
+        <a href="zap.html">
             <img src="img/whatsapp.png" alt="Contato WhatsApp" class="icon-whats">
         </a>
     </header>
@@ -27,8 +30,18 @@
         <div class="info-app">
             <h2>App Meu Atacadão</h2>
             <p>Ative descontos exclusivos direto no caixa informando seu CPF.</p>
-            <button class="btn-pequeno" style="margin: 0;"><img src="img/android.png"> Android</button>
-            <button class="btn-pequeno" style="margin: 10px 0 0 0;"><img src="img/apple.png"> iPhone</button>
+            
+            <div class="botoes-app-container">
+                
+                <a href="intent://#Intent;package=br.com.atacadao.app;end" class="btn-pequeno">
+                    <img src="img/android.png" alt="Android"> Android
+                </a>
+                
+                <a href="https://apps.apple.com/br/app/meu-atacad%C3%A3o/id1534000000" target="_blank" class="btn-pequeno">
+                    <img src="img/apple.png" alt="iPhone"> iPhone
+                </a>
+                
+            </div>
         </div>
     </section>
 
@@ -64,7 +77,15 @@
             <p><strong>Setor:</strong> CPD</p>
             <p><strong>Versão:</strong> 1.0</p>
             
-            <button class="btn-laranja" onclick="fecharModal('modalLegal')" style="margin-top: 15px;">
+            <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd; text-align: center;">
+                <p style="font-size: 14px; margin-bottom: 10px; color: #333;">💡 Encontrou um problema ou tem uma sugestão?</p>
+                <a href="mailto:hardjackers@gmail.com?subject=Feedback - Portal Atacadão Icoaraci" style="text-decoration: none;">
+                    <button style="background-color: var(--verde); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 14px;">
+                        ✉️ Enviar E-mail
+                    </button>
+                </a>
+            </div>
+            <button class="btn-laranja" onclick="fecharModal('modalLegal')" style="margin-top: 15px; width: 100%;">
                 Fechar
             </button>
         </div>

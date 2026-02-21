@@ -19,16 +19,20 @@ body {
 .faixa-verde {
     background-color: var(--verde);
     color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Agrupa todos os itens no centro da tela */
     align-items: center;
+    position: relative; /* Muito importante: mantém o botão voltar preso ao cabeçalho */
+    gap: 12px; /* Define a distância exata entre a logo, o título e o zap */
 }
 
-.faixa-verde h1 { margin: 0; font-size: 24px; }
-.logo { height: 50px; margin-right: 15px; }
+.faixa-verde h1 { 
+    margin: 0; 
+    font-size: 20px; 
+    text-align: center; 
+    /* Removemos o flex-grow antigo para ele não empurrar os ícones */
+}
 
 /* Blocos Brancos da Index */
 .container-principal {
@@ -79,14 +83,20 @@ button {
 .btn-laranja:hover { background-color: rgb(230, 109, 0); }
 
 .btn-voltar {
+    position: absolute;
+    left: 15px;
     background-color: var(--laranja);
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    position: absolute;
-    left: 20px;
-    width: auto;
-    font-size: 14px;
+    width: 35px; /* Tamanho ajustado para ficar elegante */
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 /* Modais (Popups) */
@@ -128,7 +138,19 @@ button {
     gap: 10px;
     margin-top: 20px;
 }
-.btn-pequeno { max-width: 200px; padding: 10px; background-color: rgb(230, 109, 0); color: white;}
+.btn-pequeno { 
+    max-width: 200px; 
+    padding: 12px; 
+    background-color: var(--laranja); 
+    color: white;
+    border-radius: 8px;
+    text-decoration: none; /* Tira o sublinhado do link */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
 .btn-pequeno img { width: 20px; } /* Isso evita o Android Gigante */
 
 /* Bloco de Atualizações (Imagem clicável) */
@@ -251,13 +273,82 @@ button {
 }
 
 /* Ícone do WhatsApp no Cabeçalho */
-.icon-whats {
-    height: 35px; /* Um pouco menor que a logo principal */
-    margin-left: 15px; /* Espaço entre o texto e o ícone */
-    cursor: pointer; /* Mostra a mãozinha para indicar que é clicável */
-    transition: transform 0.2s;
+.icon-whats { 
+    height: 35px; 
+    margin: 0; 
 }
 
 .icon-whats:hover {
     transform: scale(1.1); /* Um pequeno efeito de zoom ao passar o mouse */
+}
+
+.faixa-verde .logo { 
+    height: 35px; 
+    margin: 0; 
+}
+
+.botoes-app-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Isso cria o espaço perfeito entre o botão Android e iPhone */
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .faixa-verde h1 {
+        font-size: 16px; /* Diminui a fonte no celular para caber tudo na mesma linha */
+    }
+    .faixa-verde .logo, .icon-whats {
+        height: 30px; /* Reduz um pouquinho os ícones no mobile */
+    }
+}
+
+/* --- PÁGINA DE ZAP: ATENDENTES E BOTÕES --- */
+.grid-atendentes {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Se a tela for pequena, joga um pra baixo do outro */
+}
+
+.cartao-atendente {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    flex: 1; /* Faz os dois cartões terem a mesma largura */
+    min-width: 140px; /* Garante que não vai espremer muito no celular */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn-zap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espaço entre a logo do zap e o texto */
+    padding: 10px;
+    font-size: 14px;
+    text-decoration: none; /* Tira o sublinhado do link */
+    width: 100%; /* Faz o botão ocupar a largura toda do cartão do atendente */
+    box-sizing: border-box;
+}
+
+.icon-btn {
+    width: 20px; /* Tamanho reduzido para caber dentro do botão */
+    height: 20px;
+}
+
+/* --- ESTILO DA FOTO DOS ATENDENTES --- */
+.foto-atendente {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Deixa a foto perfeitamente redonda */
+    object-fit: contain; /* Ajusta a imagem provisória do Android sem esticar */
+    margin: 0 auto 10px auto; /* Centraliza a imagem e dá espaço embaixo */
+    display: block;
+    background-color: #f1f1f1; /* Fundo cinza claro para destacar a imagem transparente */
+    border: 2px solid var(--verde); /* Borda verde com a identidade do Atacadão */
+    padding: 5px;
 }

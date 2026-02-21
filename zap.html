@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atacadão - Icoaraci</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body class="body-paginas">
+
+    <header class="faixa-verde">
+        <button class="btn-voltar" onclick="history.back()">←</button>
+        
+        <a href="index.html" style="display: flex; align-items: center;">
+            <img src="img/logo.png" alt="Logo Atacadão" class="logo">
+        </a>
+        
+        <h1>Atacadão - Icoaraci</h1>
+        
+        <a href="#topo">
+            <img src="img/whatsapp.png" alt="WhatsApp" class="icon-whats">
+        </a>
+    </header>
+
+    <main class="container-principal" id="topo">
+        
+        <div style="text-align: center; padding: 20px 15px 10px 15px;">
+            <h2 style="color: var(--verde); margin-bottom: 5px;">Bem-vindo ao nosso WhatsApp Belém-Icoaraci.</h2>
+            <p style="color: #555; font-size: 16px;">Fale com nossos atendentes ou entre em nosso grupo de Ofertas.</p>
+        </div>
+
+        <section class="bloco-branco">
+            <h3 style="text-align: center; color: #333; margin-top: 0;">Nossos Atendentes</h3>
+            
+            <div class="grid-atendentes">
+                <div class="cartao-atendente">
+                    <img src="img/atendente.avif" alt="Foto Thayson" class="foto-atendente">
+                    
+                    <p style="font-size: 18px; font-weight: bold; color: var(--laranja); margin-top: 0;">Thayson</p>
+                    <a href="https://wa.me/5591986352598" target="_blank" class="btn-verde btn-zap">
+                        <img src="img/whatsapp.png" alt="Zap" class="icon-btn"> Simbora
+                    </a>
+                </div>
+
+                <div class="cartao-atendente">
+                    <img src="img/atendente.avif" alt="Foto Deyvid" class="foto-atendente">
+                    
+                    <p style="font-size: 18px; font-weight: bold; color: var(--laranja); margin-top: 0;">Deyvid</p>
+                    <a href="https://wa.me/5591986367556" target="_blank" class="btn-verde btn-zap">
+                        <img src="img/whatsapp.png" alt="Zap" class="icon-btn"> Chama lá
+                    </a>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
+                
+                <div id="status-atendimento" style="font-weight: bold; font-size: 15px; margin-bottom: 10px;">
+                    </div>
+
+                <p style="margin: 0; font-size: 14px; color: #555;">
+                    <strong style="color: var(--verde);">🕒 Horário de Atendimento:</strong><br>
+                    Segunda a Sexta: 8h às 17h<br>
+                    Sábado: 8h às 12h
+                </p>
+            </div>
+
+            </div>
+        </section>
+
+        <section class="bloco-branco" style="padding: 0; overflow: hidden; margin-top: 20px;">
+            <div class="banner-clicavel" onclick="window.open('https://chat.whatsapp.com/CLHO94ueTOiBXZy1MF9GAa?mode=gi_t', '_blank')">
+                <img src="img/gpzap.png" alt="Grupo de Ofertas WhatsApp">
+                <div class="banner-overlay">
+                    <strong style="font-size: 20px; color: #fff;">Grupo de Ofertas VIP!</strong><br>
+                </div>
+            </div>
+        </section>
+
+        <div id="info-extra-zap" style="margin-top: 20px; padding: 15px; text-align: center;">
+            </div>
+
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <button id="btn-open-legal" class="btn-legal" onclick="abrirModal('modalLegal')">
+                Informações
+            </button>
+        </div>
+    </footer>
+
+    <div id="modalLegal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalLegal')">&times;</span>
+            <h3 style="color: var(--verde);">Informações do Sistema</h3>
+            <p>Portal desenvolvido para uso interno e facilitação de acesso aos clientes do Atacadão Icoaraci.</p>
+            
+            <p>
+                <strong>Desenvolvedor:</strong> Thiago Santos 
+                (<a href="https://github.com/Hardjackers" target="_blank" style="color: var(--laranja); text-decoration: none; font-weight: bold;">
+                    🧑‍💻 Hardjackers
+                </a>)
+            </p>
+            <p><strong>Setor:</strong> CPD</p>
+            <p><strong>Versão:</strong> 1.0</p>
+            
+            <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd; text-align: center;">
+                <p style="font-size: 14px; margin-bottom: 10px; color: #333;">💡 Encontrou um problema ou tem uma sugestão?</p>
+                <a href="mailto:hardjackers@gmail.com?subject=Feedback - Portal Atacadão Icoaraci" style="text-decoration: none;">
+                    <button style="background-color: var(--verde); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 14px;">
+                        ✉️ Enviar E-mail
+                    </button>
+                </a>
+            </div>
+            <button class="btn-laranja" onclick="fecharModal('modalLegal')" style="margin-top: 15px; width: 100%;">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
